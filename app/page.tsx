@@ -18,6 +18,24 @@ import { useState } from 'react'
 const whatsappUrl =
   'https://wa.me/5547997701642?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20um%20projeto'
 
+const partners = [
+  {
+    name: 'Whirlpool',
+    src: '/whirlpool.png',
+    className: 'max-h-[4.5rem] scale-[1.12]',
+  },
+  {
+    name: 'Garten Shopping',
+    src: '/garten.png',
+    className: 'max-h-[4.25rem] scale-[1.08]',
+  },
+  {
+    name: 'Mueller',
+    src: '/mueller.png',
+    className: 'max-h-[4.75rem] scale-[1.28]',
+  },
+]
+
 const pageData = {
   google_reviews_section: {
     reviews_metadata: { rating_average: '5,0', total_reviews: 161 },
@@ -230,35 +248,26 @@ export default function Page() {
 
       <section
         id="parceiros"
-        className="border-y border-slate-700 bg-slate-800"
+        className="border-y border-[#AAB8C8] bg-[#D8E2EC]"
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-6 py-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-100">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-10 sm:py-12 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-950">
             Parceiros de confiança
           </p>
 
-          <div className="grid grid-cols-3 items-center gap-6 sm:gap-10">
-            <div className="flex h-16 w-28 items-center justify-center sm:w-40">
-              <img
-                src="/whirlpool.png"
-                alt="Whirlpool"
-                className="h-12 w-full object-contain"
-              />
-            </div>
-            <div className="flex h-16 w-28 items-center justify-center sm:w-40">
-              <img
-                src="/garten.png"
-                alt="Garten Shopping"
-                className="h-12 w-full object-contain"
-              />
-            </div>
-            <div className="flex h-16 w-28 items-center justify-center sm:w-40">
-              <img
-                src="/mueller.png"
-                alt="Mueller"
-                className="h-12 w-full object-contain"
-              />
-            </div>
+          <div className="grid grid-cols-1 items-center gap-5 sm:grid-cols-3 sm:gap-6 lg:gap-8">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="flex h-20 w-full items-center justify-center sm:w-44 lg:w-48"
+              >
+                <img
+                  src={partner.src}
+                  alt={partner.name}
+                  className={`w-full object-contain ${partner.className}`}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
