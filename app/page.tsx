@@ -389,18 +389,18 @@ export default function Page() {
       </section>
 
       <section className="border-y border-border bg-primary">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-18 lg:px-10 lg:py-24">
           <div>
-            <div className="grid gap-8 lg:grid-cols-[0.55fr_1fr_1.15fr] lg:items-end lg:gap-12">
+            <div className="grid gap-8 lg:grid-cols-[0.5fr_1.45fr_1fr] lg:items-end">
               <div className="lg:[&>p]:mb-0">
                 <SectionLabel>Projeto em destaque</SectionLabel>
               </div>
 
-              <h2 className="max-w-xl text-balance font-sans text-3xl font-semibold leading-tight tracking-[-0.025em] text-primary-foreground sm:text-4xl lg:text-5xl">
+              <h2 className="max-w-none text-balance font-sans text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-primary-foreground sm:text-4xl lg:text-[42px] xl:text-5xl">
                 Sistema de combate a incêndio no Aeroporto de Joinville
               </h2>
 
-              <p className="max-w-lg text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base lg:justify-self-end">
+              <p className="max-w-xl text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base lg:justify-self-end">
                 Execução da montagem do sistema de combate a incêndio no
                 Aeroporto de Joinville, com infraestrutura hidráulica aparente,
                 tubulações técnicas e integração com a estrutura operacional da
@@ -427,10 +427,10 @@ export default function Page() {
       </section>
 
       <section className="border-y border-border bg-card/50">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div className="mb-12 max-w-xl">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+          <div className="mb-10 max-w-2xl">
             <SectionLabel>Quem confia</SectionLabel>
-            <h2 className="max-w-sm text-balance font-sans text-3xl font-semibold leading-tight tracking-[-0.025em] sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-2xl text-balance font-sans text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Excelência que se comprova em campo.
             </h2>
           </div>
@@ -449,8 +449,8 @@ export default function Page() {
                   />
                 </div>
 
-                <div className="flex flex-grow flex-col p-7 sm:p-8">
-                  <Sparkles className="mb-6 text-accent" size={20} />
+                <div className="flex flex-grow flex-col p-6 sm:p-7">
+                  <Sparkles className="mb-5 text-accent" size={20} />
 
                   <blockquote className="flex-grow text-pretty font-sans text-base font-medium leading-7 text-white">
                     “{testimonial.text}”
