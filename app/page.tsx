@@ -41,19 +41,19 @@ const pageData = {
       author: 'Eng. Cláudia M.',
       role: 'Três rios/RJ',
       text: 'Contratamos a empresa do Anderson para a instalação completa do sistema de incêndio em nosso prédio comercial. Trabalho limpo, dentro do prazo e com muita responsabilidade técnica. Recomendo!',
-      image_path: '/fotos/obra1.JPG',
+      image_path: '/fotos/obra1.jpg',
     },
     {
       author: 'Rodrigo Tavares',
       role: 'Síndico residencial',
       text: 'Serviço excelente! Toda a parte hidráulica do nosso condomínio foi feita por eles e nunca tivemos problemas. Profissionalismo e experiência contam muito.',
-      image_path: '/fotos/condominio.JPG',
+      image_path: '/fotos/condominio.jpg',
     },
     {
       author: 'Debora Almeida',
       role: 'Arquiteta em Joinville/SC',
       text: 'Contratamos a equipe do Anderson para executar toda a instalação hidráulica do nosso prédio, com base no projeto fornecido pelo nosso engenheiro. Eles foram extremamente profissionais, seguiram todas as especificações técnicas e entregaram tudo dentro do prazo. Excelente parceria!',
-      image_path: '/fotos/debora.JPG',
+      image_path: '/fotos/debora.jpg',
     },
   ],
 }
@@ -230,10 +230,10 @@ export default function Page() {
 
       <section
         id="parceiros"
-        className="border-y border-border bg-card/40"
+        className="border-y border-slate-400 bg-slate-300"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-7 px-6 py-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-950">
             Parceiros de confiança
           </p>
 
@@ -241,17 +241,17 @@ export default function Page() {
             <img
               src="/whirlpool.png"
               alt="Whirlpool"
-              className="h-10 w-auto max-w-full object-contain grayscale opacity-70"
+              className="h-12 w-auto max-w-full bg-transparent object-contain"
             />
             <img
               src="/garten.png"
               alt="Garten Shopping"
-              className="h-10 w-auto max-w-full object-contain grayscale opacity-70"
+              className="h-12 w-auto max-w-full bg-transparent object-contain"
             />
             <img
               src="/mueller.png"
               alt="Mueller"
-              className="h-10 w-auto max-w-full object-contain grayscale opacity-70"
+              className="h-12 w-auto max-w-full bg-transparent object-contain"
             />
           </div>
         </div>
@@ -376,7 +376,7 @@ export default function Page() {
                 <img
                   src={testimonial.image_path}
                   alt=""
-                  className="h-48 w-full rounded-t-md grayscale contrast-125 object-cover"
+                  className="h-48 w-full rounded-t-md bg-slate-700 grayscale contrast-125 object-cover"
                 />
 
                 <div className="flex flex-grow flex-col p-7 sm:p-8">
