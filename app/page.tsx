@@ -137,19 +137,19 @@ export default function Page() {
           >
             <a
               href="#servicos"
-              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground transition-colors duration-200 hover:text-accent"
             >
               Serviços
             </a>
             <a
               href="#parceiros"
-              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground transition-colors duration-200 hover:text-accent"
             >
               Experiência
             </a>
             <a
               href="#contato"
-              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground transition-colors duration-200 hover:text-accent"
             >
               Contato
             </a>
@@ -159,7 +159,7 @@ export default function Page() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 border border-accent/50 px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition-colors hover:bg-accent hover:text-accent-foreground md:flex"
+            className="hidden items-center gap-2 border border-accent/50 px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/10 md:flex"
           >
             Fale com um especialista
             <ArrowUpRight size={14} />
@@ -179,14 +179,14 @@ export default function Page() {
             <a
               href="#servicos"
               onClick={() => setMenuOpen(false)}
-              className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+              className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors duration-200 hover:text-accent"
             >
               Serviços
             </a>
             <a
               href="#parceiros"
               onClick={() => setMenuOpen(false)}
-              className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+              className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors duration-200 hover:text-accent"
             >
               Experiência
             </a>
@@ -194,7 +194,7 @@ export default function Page() {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-xs uppercase tracking-widest text-accent"
+              className="font-mono text-xs uppercase tracking-widest text-accent transition-colors duration-200 hover:text-foreground"
             >
               Falar no WhatsApp
             </a>
@@ -202,16 +202,16 @@ export default function Page() {
         )}
       </header>
 
-      <section className="relative isolate flex min-h-[720px] items-end pb-20 pt-36 lg:min-h-[820px] lg:pb-28">
+      <section className="relative isolate flex min-h-[660px] items-end pb-16 pt-36 sm:min-h-[700px] lg:min-h-[760px] lg:pb-24">
         <div className="absolute inset-0 -z-20 bg-[url('/images/hero-industrial.png')] bg-cover bg-center" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(4,18,35,.98)_5%,rgba(4,18,35,.82)_45%,rgba(4,18,35,.18)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(4,18,35,.9),transparent_58%)]" />
 
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 lg:grid-cols-[1.25fr_.75fr] lg:px-10">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <SectionLabel>Engenharia que protege o futuro</SectionLabel>
 
-            <h1 className="max-w-3xl text-balance font-sans text-5xl font-semibold leading-[1.03] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl">
+            <h1 className="max-w-4xl text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Soluções Hidráulicas e de Combate a Incêndio para Grandes Obras
             </h1>
 
@@ -226,18 +226,18 @@ export default function Page() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-4 bg-accent px-6 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-transform hover:-translate-y-1"
+                className="group inline-flex items-center gap-4 bg-accent px-6 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent/15 motion-safe:hover:-translate-y-1"
               >
                 Solicitar orçamento
                 <ArrowUpRight
                   size={17}
-                  className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                  className="transition-transform duration-300 ease-out motion-safe:group-hover:translate-x-1 motion-safe:group-hover:-translate-y-1"
                 />
               </a>
 
               <a
                 href="#servicos"
-                className="inline-flex items-center gap-2 px-3 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white/75 hover:text-white"
+                className="inline-flex items-center gap-2 px-3 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white/75 transition-all duration-300 ease-out hover:text-accent motion-safe:hover:-translate-y-0.5"
               >
                 Conheça nossas soluções
                 <ChevronRight size={16} />
@@ -295,7 +295,7 @@ export default function Page() {
           <div>
             <SectionLabel>O que fazemos</SectionLabel>
 
-            <h2 className="max-w-md text-balance font-sans text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="max-w-md text-balance font-sans text-3xl font-semibold leading-tight tracking-[-0.025em] sm:text-4xl lg:text-5xl">
               Infraestrutura invisível. Impacto essencial.
             </h2>
 
@@ -310,8 +310,8 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
-            <article className="bg-background p-8 transition-colors hover:bg-card sm:p-10">
+          <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
+            <article className="relative border border-transparent bg-background p-8 transition-all duration-300 ease-out hover:border-accent/40 hover:bg-card hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-1 sm:p-10">
               <div className="mb-20 flex items-start justify-between">
                 <Droplets
                   className="text-accent"
@@ -348,7 +348,7 @@ export default function Page() {
               </ul>
             </article>
 
-            <article className="bg-background p-8 transition-colors hover:bg-card sm:p-10">
+            <article className="relative border border-transparent bg-background p-8 transition-all duration-300 ease-out hover:border-accent/40 hover:bg-card hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-1 sm:p-10">
               <div className="mb-20 flex items-start justify-between">
                 <Flame
                   className="text-accent"
@@ -390,15 +390,17 @@ export default function Page() {
 
       <section className="border-y border-border bg-primary">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div className="grid gap-12 lg:grid-cols-[.65fr_1.35fr] lg:items-end lg:gap-16">
-            <div>
-              <SectionLabel>Projeto em destaque</SectionLabel>
+          <div>
+            <div className="grid gap-8 lg:grid-cols-[0.55fr_1fr_1.15fr] lg:items-end lg:gap-12">
+              <div className="lg:[&>p]:mb-0">
+                <SectionLabel>Projeto em destaque</SectionLabel>
+              </div>
 
-              <h2 className="max-w-xl text-balance font-sans text-4xl font-semibold leading-tight tracking-[-0.04em] text-primary-foreground sm:text-5xl">
+              <h2 className="max-w-xl text-balance font-sans text-3xl font-semibold leading-tight tracking-[-0.025em] text-primary-foreground sm:text-4xl lg:text-5xl">
                 Sistema de combate a incêndio no Aeroporto de Joinville
               </h2>
 
-              <p className="mt-7 max-w-lg text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base">
+              <p className="max-w-lg text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base lg:justify-self-end">
                 Execução da montagem do sistema de combate a incêndio no
                 Aeroporto de Joinville, com infraestrutura hidráulica aparente,
                 tubulações técnicas e integração com a estrutura operacional da
@@ -406,16 +408,16 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-3">
               {featuredProjectImages.map((image) => (
                 <figure
                   key={image.src}
-                  className="overflow-hidden rounded-md border border-slate-700 bg-slate-900"
+                  className="group overflow-hidden rounded-md border border-slate-700 bg-slate-900 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/25 motion-safe:hover:-translate-y-1"
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="aspect-[4/3] w-full object-cover grayscale contrast-125"
+                    className="aspect-[4/3] w-full object-cover grayscale contrast-125 transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
                   />
                 </figure>
               ))}
@@ -428,7 +430,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <div className="mb-12 max-w-xl">
             <SectionLabel>Quem confia</SectionLabel>
-            <h2 className="max-w-sm text-balance font-sans text-4xl font-semibold leading-tight tracking-[-0.04em]">
+            <h2 className="max-w-sm text-balance font-sans text-3xl font-semibold leading-tight tracking-[-0.025em] sm:text-4xl lg:text-5xl">
               Excelência que se comprova em campo.
             </h2>
           </div>
@@ -437,13 +439,15 @@ export default function Page() {
             {pageData.testimonials_section.map((testimonial) => (
               <figure
                 key={testimonial.author}
-                className="flex h-full flex-col overflow-hidden rounded-md border border-slate-700 bg-slate-800 transition-all hover:-translate-y-1 hover:shadow-xl"
+                className="group flex h-full flex-col overflow-hidden rounded-md border border-slate-700 bg-slate-800 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/25 motion-safe:hover:-translate-y-1"
               >
-                <img
-                  src={testimonial.image_path}
-                  alt=""
-                  className="h-48 w-full rounded-t-md grayscale contrast-125 object-cover"
-                />
+                <div className="overflow-hidden">
+                  <img
+                    src={testimonial.image_path}
+                    alt=""
+                    className="h-48 w-full rounded-t-md object-cover grayscale contrast-125 transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
+                  />
+                </div>
 
                 <div className="flex flex-grow flex-col p-7 sm:p-8">
                   <Sparkles className="mb-6 text-accent" size={20} />
@@ -514,7 +518,7 @@ export default function Page() {
             {pageData.google_reviews_section.reviews.map((review, index) => (
               <article
                 key={`${review.author_name}-${index}`}
-                className="flex min-h-[250px] flex-col rounded-sm border border-slate-700 bg-slate-800 p-7 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl sm:p-8"
+                className="flex min-h-[250px] flex-col rounded-sm border border-slate-700 bg-slate-800 p-7 shadow-lg shadow-black/10 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-1 sm:p-8"
               >
                 <div className="flex items-center gap-4">
                   <div
@@ -568,7 +572,7 @@ export default function Page() {
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:items-end">
           <div>
             <SectionLabel>Vamos construir juntos</SectionLabel>
-            <h2 className="max-w-3xl text-balance font-sans text-5xl font-semibold leading-[1.05] tracking-[-0.05em] text-primary-foreground sm:text-6xl">
+            <h2 className="max-w-3xl text-balance font-sans text-3xl font-semibold leading-[1.05] tracking-[-0.025em] text-primary-foreground sm:text-4xl lg:text-5xl">
               Seu próximo projeto começa com uma conversa.
             </h2>
           </div>
@@ -577,12 +581,12 @@ export default function Page() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex shrink-0 items-center justify-center gap-4 bg-accent px-7 py-5 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-transform hover:-translate-y-1"
+            className="group inline-flex shrink-0 items-center justify-center gap-4 bg-accent px-7 py-5 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent/15 motion-safe:hover:-translate-y-1"
           >
             Falar pelo WhatsApp
             <ArrowUpRight
               size={18}
-              className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              className="transition-transform duration-300 ease-out motion-safe:group-hover:translate-x-1 motion-safe:group-hover:-translate-y-1"
             />
           </a>
         </div>
@@ -609,7 +613,7 @@ export default function Page() {
             </a>
             <a
               href="mailto:Stilpen.hidraulica.sc@gmail.com"
-              className="text-sm text-primary-foreground/60 hover:text-primary-foreground"
+              className="text-sm text-primary-foreground/60 transition-colors duration-200 hover:text-accent"
             >
               Stilpen.hidraulica.sc@gmail.com
             </a>
