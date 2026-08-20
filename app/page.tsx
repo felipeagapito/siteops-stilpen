@@ -22,17 +22,17 @@ const partners = [
   {
     name: 'Whirlpool',
     src: '/whirlpool.png',
-    className: 'scale-[1.12]',
+    className: 'scale-[1.05]',
   },
   {
     name: 'Garten Shopping',
     src: '/garten.png',
-    className: 'scale-[1.08]',
+    className: 'scale-[1.02]',
   },
   {
     name: 'Mueller',
     src: '/mueller.png',
-    className: 'scale-[1.25]',
+    className: 'scale-[1.12]',
   },
 ]
 
@@ -159,14 +159,17 @@ export default function Page() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 border border-accent/50 px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/10 md:flex"
+            className="group hidden h-14 items-center gap-2 rounded-sm border border-accent/50 px-5 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/15 md:flex"
           >
             Fale com um especialista
-            <ArrowUpRight size={14} />
+            <ArrowUpRight
+              size={14}
+              className="transition-transform duration-300 ease-out motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5"
+            />
           </a>
 
           <button
-            className="text-foreground md:hidden"
+            className="flex size-12 items-center justify-center rounded-sm border border-white/10 text-foreground md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
@@ -202,7 +205,7 @@ export default function Page() {
         )}
       </header>
 
-      <section className="relative isolate flex min-h-[660px] items-end pb-16 pt-36 sm:min-h-[700px] lg:min-h-[760px] lg:pb-24">
+      <section className="relative isolate flex min-h-[640px] items-end pb-16 pt-36 sm:min-h-[680px] lg:min-h-[720px] lg:pb-20">
         <div className="absolute inset-0 -z-20 bg-[url('/images/hero-industrial.png')] bg-cover bg-center" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(4,18,35,.98)_5%,rgba(4,18,35,.82)_45%,rgba(4,18,35,.18)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(4,18,35,.9),transparent_58%)]" />
@@ -211,7 +214,7 @@ export default function Page() {
           <div className="max-w-4xl">
             <SectionLabel>Engenharia que protege o futuro</SectionLabel>
 
-            <h1 className="max-w-4xl text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="max-w-4xl text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
               Soluções Hidráulicas e de Combate a Incêndio para Grandes Obras
             </h1>
 
@@ -226,7 +229,7 @@ export default function Page() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-4 bg-accent px-6 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent/15 motion-safe:hover:-translate-y-1"
+                className="group inline-flex h-14 items-center justify-center gap-4 rounded-sm bg-accent px-7 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent/15 motion-safe:hover:-translate-y-1"
               >
                 Solicitar orçamento
                 <ArrowUpRight
@@ -237,7 +240,7 @@ export default function Page() {
 
               <a
                 href="#servicos"
-                className="inline-flex items-center gap-2 px-3 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white/75 transition-all duration-300 ease-out hover:text-accent motion-safe:hover:-translate-y-0.5"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-sm border border-white/15 px-5 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white/75 transition-all duration-300 ease-out hover:border-accent/40 hover:text-accent motion-safe:hover:-translate-y-0.5"
               >
                 Conheça nossas soluções
                 <ChevronRight size={16} />
@@ -265,16 +268,16 @@ export default function Page() {
         id="parceiros"
         className="border-y border-[#AAB8C8] bg-[#D8E2EC]"
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-6 sm:flex-row sm:items-center sm:justify-between lg:px-10 lg:py-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between lg:px-10 lg:py-6">
           <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-950">
             Parceiros de confiança
           </p>
 
-          <div className="flex flex-wrap items-center justify-start gap-4 sm:justify-end lg:gap-7">
+          <div className="flex flex-wrap items-center justify-start gap-3 sm:justify-end lg:gap-6">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex h-14 w-40 items-center justify-center lg:h-16 lg:w-48"
+                className="flex h-12 w-36 items-center justify-center lg:h-14 lg:w-44"
               >
                 <img
                   src={partner.src}
@@ -289,9 +292,9 @@ export default function Page() {
 
       <section
         id="servicos"
-        className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32"
+        className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24"
       >
-        <div className="grid gap-16 lg:grid-cols-[.75fr_1.25fr] lg:gap-24">
+        <div className="grid gap-12 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
           <div>
             <SectionLabel>O que fazemos</SectionLabel>
 
@@ -311,8 +314,8 @@ export default function Page() {
           </div>
 
           <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
-            <article className="relative border border-transparent bg-background p-8 transition-all duration-300 ease-out hover:border-accent/40 hover:bg-card hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-1 sm:p-10">
-              <div className="mb-20 flex items-start justify-between">
+            <article className="relative flex h-full flex-col border border-transparent bg-background p-7 transition-all duration-300 ease-out hover:border-accent/40 hover:bg-card hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-0.5 sm:p-8">
+              <div className="mb-14 flex items-start justify-between">
                 <Droplets
                   className="text-accent"
                   size={30}
@@ -332,7 +335,7 @@ export default function Page() {
                 durabilidade e eficiência operacional.
               </p>
 
-              <ul className="mt-7 space-y-3 text-sm text-foreground/80">
+              <ul className="mt-6 space-y-3 text-sm text-foreground/80">
                 <li className="flex gap-2">
                   <Check size={16} className="shrink-0 text-accent" />
                   Água fria e quente
@@ -348,8 +351,8 @@ export default function Page() {
               </ul>
             </article>
 
-            <article className="relative border border-transparent bg-background p-8 transition-all duration-300 ease-out hover:border-accent/40 hover:bg-card hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-1 sm:p-10">
-              <div className="mb-20 flex items-start justify-between">
+            <article className="relative flex h-full flex-col border border-transparent bg-background p-7 transition-all duration-300 ease-out hover:border-accent/40 hover:bg-card hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-0.5 sm:p-8">
+              <div className="mb-14 flex items-start justify-between">
                 <Flame
                   className="text-accent"
                   size={30}
@@ -369,7 +372,7 @@ export default function Page() {
                 precisão quando cada segundo importa.
               </p>
 
-              <ul className="mt-7 space-y-3 text-sm text-foreground/80">
+              <ul className="mt-6 space-y-3 text-sm text-foreground/80">
                 <li className="flex gap-2">
                   <Check size={16} className="shrink-0 text-accent" />
                   Sprinklers e hidrantes
@@ -389,39 +392,35 @@ export default function Page() {
       </section>
 
       <section className="border-y border-border bg-primary">
-        <div className="mx-auto max-w-7xl px-6 py-18 lg:px-10 lg:py-24">
-          <div>
-            <div className="grid gap-8 lg:grid-cols-[0.5fr_1.45fr_1fr] lg:items-end">
-              <div className="lg:[&>p]:mb-0">
-                <SectionLabel>Projeto em destaque</SectionLabel>
-              </div>
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+          <div className="max-w-5xl">
+            <SectionLabel>Projeto em destaque</SectionLabel>
 
-              <h2 className="max-w-none text-balance font-sans text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-primary-foreground sm:text-4xl lg:text-[42px] xl:text-5xl">
-                Sistema de combate a incêndio no Aeroporto de Joinville
-              </h2>
+            <h2 className="max-w-5xl text-balance font-sans text-3xl font-semibold leading-[1.08] tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl">
+              Sistema de combate a incêndio no Aeroporto de Joinville
+            </h2>
 
-              <p className="max-w-xl text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base lg:justify-self-end">
-                Execução da montagem do sistema de combate a incêndio no
-                Aeroporto de Joinville, com infraestrutura hidráulica aparente,
-                tubulações técnicas e integração com a estrutura operacional da
-                obra.
-              </p>
-            </div>
+            <p className="mt-7 max-w-3xl text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base">
+              Execução da montagem do sistema de combate a incêndio no
+              Aeroporto de Joinville, com infraestrutura hidráulica aparente,
+              tubulações técnicas e integração com a estrutura operacional da
+              obra.
+            </p>
+          </div>
 
-            <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-3">
-              {featuredProjectImages.map((image) => (
-                <figure
-                  key={image.src}
-                  className="group overflow-hidden rounded-md border border-slate-700 bg-slate-900 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/25 motion-safe:hover:-translate-y-1"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="aspect-[4/3] w-full object-cover grayscale contrast-125 transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-                  />
-                </figure>
-              ))}
-            </div>
+          <div className="mx-auto mt-10 grid max-w-6xl gap-4 md:grid-cols-3">
+            {featuredProjectImages.map((image) => (
+              <figure
+                key={image.src}
+                className="group overflow-hidden rounded-md border border-slate-700 bg-slate-900 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/25 motion-safe:hover:-translate-y-0.5"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="aspect-[4/3] w-full object-cover grayscale contrast-125 transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
+                />
+              </figure>
+            ))}
           </div>
         </div>
       </section>
@@ -430,7 +429,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
           <div className="mb-10 max-w-2xl">
             <SectionLabel>Quem confia</SectionLabel>
-            <h2 className="max-w-2xl text-balance font-sans text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-2xl text-balance font-sans text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-[44px]">
               Excelência que se comprova em campo.
             </h2>
           </div>
@@ -445,14 +444,14 @@ export default function Page() {
                   <img
                     src={testimonial.image_path}
                     alt=""
-                    className="h-48 w-full rounded-t-md object-cover grayscale contrast-125 transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
+                    className="h-44 w-full rounded-t-md object-cover grayscale contrast-125 transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03] sm:h-48"
                   />
                 </div>
 
-                <div className="flex flex-grow flex-col p-6 sm:p-7">
-                  <Sparkles className="mb-5 text-accent" size={20} />
+                <div className="flex flex-grow flex-col p-6">
+                  <Sparkles className="mb-4 text-accent" size={20} />
 
-                  <blockquote className="flex-grow text-pretty font-sans text-base font-medium leading-7 text-white">
+                  <blockquote className="flex-grow text-pretty font-sans text-sm font-medium leading-6 text-white sm:text-[15px]">
                     “{testimonial.text}”
                   </blockquote>
 
@@ -518,7 +517,7 @@ export default function Page() {
             {pageData.google_reviews_section.reviews.map((review, index) => (
               <article
                 key={`${review.author_name}-${index}`}
-                className="flex min-h-[250px] flex-col rounded-sm border border-slate-700 bg-slate-800 p-7 shadow-lg shadow-black/10 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-1 sm:p-8"
+                className="flex min-h-[210px] flex-col rounded-sm border border-slate-700 bg-slate-800 p-6 shadow-lg shadow-black/10 transition-all duration-300 ease-out hover:border-accent/40 hover:shadow-xl hover:shadow-black/20 motion-safe:hover:-translate-y-0.5 sm:p-7"
               >
                 <div className="flex items-center gap-4">
                   <div
@@ -556,7 +555,7 @@ export default function Page() {
                   </span>
                 </div>
 
-                <p className="mt-8 text-pretty text-sm leading-7 text-muted-foreground">
+                <p className="mt-6 text-pretty text-sm leading-7 text-muted-foreground">
                   {review.text}
                 </p>
               </article>
@@ -569,7 +568,7 @@ export default function Page() {
         id="contato"
         className="relative overflow-hidden bg-primary px-6 py-24 text-primary-foreground lg:px-10 lg:py-32"
       >
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:items-end">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,420px)] lg:items-center">
           <div>
             <SectionLabel>Vamos construir juntos</SectionLabel>
             <h2 className="max-w-3xl text-balance font-sans text-3xl font-semibold leading-[1.05] tracking-[-0.025em] text-primary-foreground sm:text-4xl lg:text-5xl">
@@ -577,18 +576,30 @@ export default function Page() {
             </h2>
           </div>
 
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="group inline-flex shrink-0 items-center justify-center gap-4 bg-accent px-7 py-5 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent/15 motion-safe:hover:-translate-y-1"
-          >
-            Falar pelo WhatsApp
-            <ArrowUpRight
-              size={18}
-              className="transition-transform duration-300 ease-out motion-safe:group-hover:translate-x-1 motion-safe:group-hover:-translate-y-1"
-            />
-          </a>
+          <div className="flex justify-center">
+            <div className="inline-flex items-stretch border border-white/15 shadow-lg shadow-black/15">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex h-16 min-w-[220px] items-center justify-center gap-4 bg-accent px-6 font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent-foreground transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent/15 motion-safe:hover:-translate-y-0.5 sm:h-20 sm:px-8"
+              >
+                Falar pelo WhatsApp
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform duration-300 ease-out motion-safe:group-hover:translate-x-1 motion-safe:group-hover:-translate-y-1"
+                />
+              </a>
+
+              <div className="flex h-16 w-16 items-center justify-center border-l border-primary/10 bg-white p-1.5 sm:h-20 sm:w-20">
+                <img
+                  src="/whatsapp-qr.png"
+                  alt="QR Code para abrir o WhatsApp da Stilpen"
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
