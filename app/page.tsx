@@ -230,29 +230,35 @@ export default function Page() {
 
       <section
         id="parceiros"
-        className="border-y border-slate-400 bg-slate-300"
+        className="border-y border-slate-700 bg-slate-800"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-7 px-6 py-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-950">
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-100">
             Parceiros de confiança
           </p>
 
-          <div className="grid grid-cols-3 items-center gap-8 sm:gap-16">
-            <img
-              src="/whirlpool.png"
-              alt="Whirlpool"
-              className="h-12 w-auto max-w-full bg-transparent object-contain"
-            />
-            <img
-              src="/garten.png"
-              alt="Garten Shopping"
-              className="h-12 w-auto max-w-full bg-transparent object-contain"
-            />
-            <img
-              src="/mueller.png"
-              alt="Mueller"
-              className="h-12 w-auto max-w-full bg-transparent object-contain"
-            />
+          <div className="grid grid-cols-3 items-center gap-6 sm:gap-10">
+            <div className="flex h-16 w-28 items-center justify-center sm:w-40">
+              <img
+                src="/whirlpool.png"
+                alt="Whirlpool"
+                className="h-12 w-full object-contain"
+              />
+            </div>
+            <div className="flex h-16 w-28 items-center justify-center sm:w-40">
+              <img
+                src="/garten.png"
+                alt="Garten Shopping"
+                className="h-12 w-full object-contain"
+              />
+            </div>
+            <div className="flex h-16 w-28 items-center justify-center sm:w-40">
+              <img
+                src="/mueller.png"
+                alt="Mueller"
+                className="h-12 w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -376,7 +382,7 @@ export default function Page() {
                 <img
                   src={testimonial.image_path}
                   alt=""
-                  className="h-48 w-full rounded-t-md bg-slate-700 grayscale contrast-125 object-cover"
+                  className="h-48 w-full rounded-t-md grayscale contrast-125 object-cover"
                 />
 
                 <div className="flex flex-grow flex-col p-7 sm:p-8">
