@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+}
+
+:root {
+  color-scheme: dark;
+  --background: oklch(0.17 0.035 245);
+  --foreground: oklch(0.96 0.015 220);
+  --card: oklch(0.205 0.04 245);
+  --card-foreground: oklch(0.96 0.015 220);
+  --primary: oklch(0.135 0.038 246);
+  --primary-foreground: oklch(0.96 0.015 220);
+  --accent: oklch(0.76 0.16 178);
+  --accent-foreground: oklch(0.12 0.035 230);
+  --muted-foreground: oklch(0.68 0.025 225);
+  --border: oklch(0.96 0.015 220 / 13%);
+  --ring: oklch(0.76 0.16 178);
+}
+
+* { @apply border-border; }
+html { background: var(--background); scroll-behavior: smooth; }
+body { @apply bg-background text-foreground; }
+::selection { background: var(--accent); color: var(--accent-foreground); }
+
+@keyframes subtle-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main > section:first-of-type h1 { animation: subtle-rise 700ms ease-out both; }
+main > section:first-of-type p, main > section:first-of-type a { animation: subtle-rise 700ms 120ms ease-out both; }
