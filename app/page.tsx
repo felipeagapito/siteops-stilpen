@@ -22,17 +22,32 @@ const partners = [
   {
     name: 'Whirlpool',
     src: '/whirlpool.png',
-    className: 'max-h-[4.5rem] scale-[1.12]',
+    className: 'scale-[1.12]',
   },
   {
     name: 'Garten Shopping',
     src: '/garten.png',
-    className: 'max-h-[4.25rem] scale-[1.08]',
+    className: 'scale-[1.08]',
   },
   {
     name: 'Mueller',
     src: '/mueller.png',
-    className: 'max-h-[4.75rem] scale-[1.28]',
+    className: 'scale-[1.25]',
+  },
+]
+
+const featuredProjectImages = [
+  {
+    src: '/projetos/aeroporto-joinville/aeroporto-joinville-1.jpg',
+    alt: 'Tubulações aparentes do sistema de combate a incêndio no Aeroporto de Joinville',
+  },
+  {
+    src: '/projetos/aeroporto-joinville/aeroporto-joinville-2.jpg',
+    alt: 'Infraestrutura hidráulica técnica instalada no Aeroporto de Joinville',
+  },
+  {
+    src: '/projetos/aeroporto-joinville/aeroporto-joinville-3.jpg',
+    alt: 'Montagem de tubulações de incêndio integrada à estrutura da obra',
   },
 ]
 
@@ -250,21 +265,21 @@ export default function Page() {
         id="parceiros"
         className="border-y border-[#AAB8C8] bg-[#D8E2EC]"
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-10 sm:py-12 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-6 sm:flex-row sm:items-center sm:justify-between lg:px-10 lg:py-8">
           <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-slate-950">
             Parceiros de confiança
           </p>
 
-          <div className="grid grid-cols-1 items-center gap-5 sm:grid-cols-3 sm:gap-6 lg:gap-8">
+          <div className="flex flex-wrap items-center justify-start gap-4 sm:justify-end lg:gap-7">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex h-20 w-full items-center justify-center sm:w-44 lg:w-48"
+                className="flex h-14 w-40 items-center justify-center lg:h-16 lg:w-48"
               >
                 <img
                   src={partner.src}
                   alt={partner.name}
-                  className={`w-full object-contain ${partner.className}`}
+                  className={`h-full w-full object-contain ${partner.className}`}
                 />
               </div>
             ))}
@@ -369,6 +384,42 @@ export default function Page() {
                 </li>
               </ul>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-primary">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+          <div className="grid gap-12 lg:grid-cols-[.65fr_1.35fr] lg:items-end lg:gap-16">
+            <div>
+              <SectionLabel>Projeto em destaque</SectionLabel>
+
+              <h2 className="max-w-xl text-balance font-sans text-4xl font-semibold leading-tight tracking-[-0.04em] text-primary-foreground sm:text-5xl">
+                Sistema de combate a incêndio no Aeroporto de Joinville
+              </h2>
+
+              <p className="mt-7 max-w-lg text-pretty text-sm leading-7 text-primary-foreground/65 sm:text-base">
+                Execução da montagem do sistema de combate a incêndio no
+                Aeroporto de Joinville, com infraestrutura hidráulica aparente,
+                tubulações técnicas e integração com a estrutura operacional da
+                obra.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3">
+              {featuredProjectImages.map((image) => (
+                <figure
+                  key={image.src}
+                  className="overflow-hidden rounded-md border border-slate-700 bg-slate-900"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="aspect-[4/3] w-full object-cover grayscale contrast-125"
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
