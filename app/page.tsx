@@ -41,19 +41,19 @@ const pageData = {
       author: 'Eng. Cláudia M.',
       role: 'Três rios/RJ',
       text: 'Contratamos a empresa do Anderson para a instalação completa do sistema de incêndio em nosso prédio comercial. Trabalho limpo, dentro do prazo e com muita responsabilidade técnica. Recomendo!',
-      image_path: '/fotos/obra1.jpg',
+      image_path: '/fotos/obra1.JPG',
     },
     {
       author: 'Rodrigo Tavares',
       role: 'Síndico residencial',
       text: 'Serviço excelente! Toda a parte hidráulica do nosso condomínio foi feita por eles e nunca tivemos problemas. Profissionalismo e experiência contam muito.',
-      image_path: '/fotos/condominio.jpg',
+      image_path: '/fotos/condominio.JPG',
     },
     {
       author: 'Debora Almeida',
       role: 'Arquiteta em Joinville/SC',
       text: 'Contratamos a equipe do Anderson para executar toda a instalação hidráulica do nosso prédio, com base no projeto fornecido pelo nosso engenheiro. Eles foram extremamente profissionais, seguiram todas as especificações técnicas e entregaram tudo dentro do prazo. Excelente parceria!',
-      image_path: '/fotos/debora.jpg',
+      image_path: '/fotos/debora.JPG',
     },
   ],
 }
